@@ -1,0 +1,39 @@
+#
+# ${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt
+#
+target_sources(${target}
+    PRIVATE
+        ${CMAKE_CURRENT_LIST_DIR}/big5.h
+        ${CMAKE_CURRENT_LIST_DIR}/bind_textdomain_codeset.c
+        ${CMAKE_CURRENT_LIST_DIR}/catclose.c
+        ${CMAKE_CURRENT_LIST_DIR}/catgets.c
+        ${CMAKE_CURRENT_LIST_DIR}/catopen.c
+        ${CMAKE_CURRENT_LIST_DIR}/c_locale.c
+        ${CMAKE_CURRENT_LIST_DIR}/codepages.h
+        ${CMAKE_CURRENT_LIST_DIR}/dcngettext.c
+        ${CMAKE_CURRENT_LIST_DIR}/duplocale.c
+        ${CMAKE_CURRENT_LIST_DIR}/freelocale.c
+        ${CMAKE_CURRENT_LIST_DIR}/gb18030.h
+        ${CMAKE_CURRENT_LIST_DIR}/hkscs.h
+        ${CMAKE_CURRENT_LIST_DIR}/iconv.c
+        ${CMAKE_CURRENT_LIST_DIR}/iconv_close.c
+        ${CMAKE_CURRENT_LIST_DIR}/jis0208.h
+        ${CMAKE_CURRENT_LIST_DIR}/ksc.h
+        ${CMAKE_CURRENT_LIST_DIR}/langinfo.c
+        ${CMAKE_CURRENT_LIST_DIR}/__lctrans.c
+        ${CMAKE_CURRENT_LIST_DIR}/legacychars.h
+        ${CMAKE_CURRENT_LIST_DIR}/localeconv.c
+        ${CMAKE_CURRENT_LIST_DIR}/locale_map.c
+        ${CMAKE_CURRENT_LIST_DIR}/__mo_lookup.c
+        ${CMAKE_CURRENT_LIST_DIR}/newlocale.c
+        ${CMAKE_CURRENT_LIST_DIR}/pleval.c
+        ${CMAKE_CURRENT_LIST_DIR}/revjis.h
+        ${CMAKE_CURRENT_LIST_DIR}/setlocale.c
+        ${CMAKE_CURRENT_LIST_DIR}/strcoll.c
+        ${CMAKE_CURRENT_LIST_DIR}/strfmon.c
+        ${CMAKE_CURRENT_LIST_DIR}/strxfrm.c
+        ${CMAKE_CURRENT_LIST_DIR}/textdomain.c
+        ${CMAKE_CURRENT_LIST_DIR}/uselocale.c
+        ${CMAKE_CURRENT_LIST_DIR}/wcscoll.c
+        ${CMAKE_CURRENT_LIST_DIR}/wcsxfrm.c
+)

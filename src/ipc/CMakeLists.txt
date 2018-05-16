@@ -1,0 +1,20 @@
+#
+# ${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt
+#
+target_sources(${target}
+    PRIVATE
+        ${CMAKE_CURRENT_LIST_DIR}/ftok.c
+        ${CMAKE_CURRENT_LIST_DIR}/ipc.h
+        ${CMAKE_CURRENT_LIST_DIR}/msgctl.c
+        ${CMAKE_CURRENT_LIST_DIR}/msgget.c
+        ${CMAKE_CURRENT_LIST_DIR}/msgrcv.c
+        ${CMAKE_CURRENT_LIST_DIR}/msgsnd.c
+        ${CMAKE_CURRENT_LIST_DIR}/semctl.c
+        ${CMAKE_CURRENT_LIST_DIR}/semget.c
+        ${CMAKE_CURRENT_LIST_DIR}/semop.c
+        ${CMAKE_CURRENT_LIST_DIR}/semtimedop.c
+        ${CMAKE_CURRENT_LIST_DIR}/shmat.c
+        ${CMAKE_CURRENT_LIST_DIR}/shmctl.c
+        ${CMAKE_CURRENT_LIST_DIR}/shmdt.c
+        ${CMAKE_CURRENT_LIST_DIR}/shmget.c
+)

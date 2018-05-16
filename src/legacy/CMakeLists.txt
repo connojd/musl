@@ -1,0 +1,22 @@
+#
+# ${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt
+#
+target_sources(${target}
+    PRIVATE
+        ${CMAKE_CURRENT_LIST_DIR}/cuserid.c
+        ${CMAKE_CURRENT_LIST_DIR}/daemon.c
+        ${CMAKE_CURRENT_LIST_DIR}/err.c
+        ${CMAKE_CURRENT_LIST_DIR}/euidaccess.c
+        ${CMAKE_CURRENT_LIST_DIR}/ftw.c
+        ${CMAKE_CURRENT_LIST_DIR}/futimes.c
+        ${CMAKE_CURRENT_LIST_DIR}/getdtablesize.c
+        ${CMAKE_CURRENT_LIST_DIR}/getloadavg.c
+        ${CMAKE_CURRENT_LIST_DIR}/getpagesize.c
+        ${CMAKE_CURRENT_LIST_DIR}/getpass.c
+        ${CMAKE_CURRENT_LIST_DIR}/getusershell.c
+        ${CMAKE_CURRENT_LIST_DIR}/isastream.c
+        ${CMAKE_CURRENT_LIST_DIR}/lutimes.c
+        ${CMAKE_CURRENT_LIST_DIR}/ulimit.c
+        ${CMAKE_CURRENT_LIST_DIR}/utmpx.c
+        ${CMAKE_CURRENT_LIST_DIR}/valloc.c
+)

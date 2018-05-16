@@ -1,0 +1,26 @@
+#
+# ${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt
+#
+target_sources(${target}
+    PRIVATE
+        ${CMAKE_CURRENT_LIST_DIR}/chmod.c
+        ${CMAKE_CURRENT_LIST_DIR}/fchmodat.c
+        ${CMAKE_CURRENT_LIST_DIR}/fchmod.c
+        ${CMAKE_CURRENT_LIST_DIR}/fstatat.c
+        ${CMAKE_CURRENT_LIST_DIR}/fstat.c
+        ${CMAKE_CURRENT_LIST_DIR}/futimens.c
+        ${CMAKE_CURRENT_LIST_DIR}/futimesat.c
+        ${CMAKE_CURRENT_LIST_DIR}/lchmod.c
+        ${CMAKE_CURRENT_LIST_DIR}/lstat.c
+        ${CMAKE_CURRENT_LIST_DIR}/mkdirat.c
+        ${CMAKE_CURRENT_LIST_DIR}/mkdir.c
+        ${CMAKE_CURRENT_LIST_DIR}/mkfifoat.c
+        ${CMAKE_CURRENT_LIST_DIR}/mkfifo.c
+        ${CMAKE_CURRENT_LIST_DIR}/mknodat.c
+        ${CMAKE_CURRENT_LIST_DIR}/mknod.c
+        ${CMAKE_CURRENT_LIST_DIR}/stat.c
+        ${CMAKE_CURRENT_LIST_DIR}/statvfs.c
+        ${CMAKE_CURRENT_LIST_DIR}/umask.c
+        ${CMAKE_CURRENT_LIST_DIR}/utimensat.c
+        ${CMAKE_CURRENT_LIST_DIR}/__xstat.c
+)

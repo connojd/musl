@@ -1,0 +1,47 @@
+#
+# ${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt
+#
+target_sources(${target}
+    PRIVATE
+        ${CMAKE_CURRENT_LIST_DIR}/alpha.h
+        ${CMAKE_CURRENT_LIST_DIR}/__ctype_b_loc.c
+        ${CMAKE_CURRENT_LIST_DIR}/__ctype_get_mb_cur_max.c
+        ${CMAKE_CURRENT_LIST_DIR}/__ctype_tolower_loc.c
+        ${CMAKE_CURRENT_LIST_DIR}/__ctype_toupper_loc.c
+        ${CMAKE_CURRENT_LIST_DIR}/isalnum.c
+        ${CMAKE_CURRENT_LIST_DIR}/isalpha.c
+        ${CMAKE_CURRENT_LIST_DIR}/isascii.c
+        ${CMAKE_CURRENT_LIST_DIR}/isblank.c
+        ${CMAKE_CURRENT_LIST_DIR}/iscntrl.c
+        ${CMAKE_CURRENT_LIST_DIR}/isdigit.c
+        ${CMAKE_CURRENT_LIST_DIR}/isgraph.c
+        ${CMAKE_CURRENT_LIST_DIR}/islower.c
+        ${CMAKE_CURRENT_LIST_DIR}/isprint.c
+        ${CMAKE_CURRENT_LIST_DIR}/ispunct.c
+        ${CMAKE_CURRENT_LIST_DIR}/isspace.c
+        ${CMAKE_CURRENT_LIST_DIR}/isupper.c
+        ${CMAKE_CURRENT_LIST_DIR}/iswalnum.c
+        ${CMAKE_CURRENT_LIST_DIR}/iswalpha.c
+        ${CMAKE_CURRENT_LIST_DIR}/iswblank.c
+        ${CMAKE_CURRENT_LIST_DIR}/iswcntrl.c
+        ${CMAKE_CURRENT_LIST_DIR}/iswctype.c
+        ${CMAKE_CURRENT_LIST_DIR}/iswdigit.c
+        ${CMAKE_CURRENT_LIST_DIR}/iswgraph.c
+        ${CMAKE_CURRENT_LIST_DIR}/iswlower.c
+        ${CMAKE_CURRENT_LIST_DIR}/iswprint.c
+        ${CMAKE_CURRENT_LIST_DIR}/iswpunct.c
+        ${CMAKE_CURRENT_LIST_DIR}/iswspace.c
+        ${CMAKE_CURRENT_LIST_DIR}/iswupper.c
+        ${CMAKE_CURRENT_LIST_DIR}/iswxdigit.c
+        ${CMAKE_CURRENT_LIST_DIR}/isxdigit.c
+        ${CMAKE_CURRENT_LIST_DIR}/nonspacing.h
+        ${CMAKE_CURRENT_LIST_DIR}/punct.h
+        ${CMAKE_CURRENT_LIST_DIR}/toascii.c
+        ${CMAKE_CURRENT_LIST_DIR}/tolower.c
+        ${CMAKE_CURRENT_LIST_DIR}/toupper.c
+        ${CMAKE_CURRENT_LIST_DIR}/towctrans.c
+        ${CMAKE_CURRENT_LIST_DIR}/wcswidth.c
+        ${CMAKE_CURRENT_LIST_DIR}/wctrans.c
+        ${CMAKE_CURRENT_LIST_DIR}/wcwidth.c
+        ${CMAKE_CURRENT_LIST_DIR}/wide.h
+)

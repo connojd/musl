@@ -1,0 +1,27 @@
+#
+# ${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt
+#
+target_sources(${target}
+    PRIVATE
+        ${CMAKE_CURRENT_LIST_DIR}/abs.c
+        ${CMAKE_CURRENT_LIST_DIR}/atof.c
+        ${CMAKE_CURRENT_LIST_DIR}/atoi.c
+        ${CMAKE_CURRENT_LIST_DIR}/atol.c
+        ${CMAKE_CURRENT_LIST_DIR}/atoll.c
+        ${CMAKE_CURRENT_LIST_DIR}/bsearch.c
+        ${CMAKE_CURRENT_LIST_DIR}/div.c
+        ${CMAKE_CURRENT_LIST_DIR}/ecvt.c
+        ${CMAKE_CURRENT_LIST_DIR}/fcvt.c
+        ${CMAKE_CURRENT_LIST_DIR}/gcvt.c
+        ${CMAKE_CURRENT_LIST_DIR}/imaxabs.c
+        ${CMAKE_CURRENT_LIST_DIR}/imaxdiv.c
+        ${CMAKE_CURRENT_LIST_DIR}/labs.c
+        ${CMAKE_CURRENT_LIST_DIR}/ldiv.c
+        ${CMAKE_CURRENT_LIST_DIR}/llabs.c
+        ${CMAKE_CURRENT_LIST_DIR}/lldiv.c
+        ${CMAKE_CURRENT_LIST_DIR}/qsort.c
+        ${CMAKE_CURRENT_LIST_DIR}/strtod.c
+        ${CMAKE_CURRENT_LIST_DIR}/strtol.c
+        ${CMAKE_CURRENT_LIST_DIR}/wcstod.c
+        ${CMAKE_CURRENT_LIST_DIR}/wcstol.c
+)

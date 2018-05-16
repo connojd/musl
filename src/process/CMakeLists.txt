@@ -1,0 +1,38 @@
+#
+# ${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt
+#
+target_sources(${target}
+    PRIVATE
+        ${CMAKE_CURRENT_LIST_DIR}/execl.c
+        ${CMAKE_CURRENT_LIST_DIR}/execle.c
+        ${CMAKE_CURRENT_LIST_DIR}/execlp.c
+        ${CMAKE_CURRENT_LIST_DIR}/execv.c
+        ${CMAKE_CURRENT_LIST_DIR}/execve.c
+        ${CMAKE_CURRENT_LIST_DIR}/execvp.c
+        ${CMAKE_CURRENT_LIST_DIR}/fdop.h
+        ${CMAKE_CURRENT_LIST_DIR}/fexecve.c
+        ${CMAKE_CURRENT_LIST_DIR}/fork.c
+        ${CMAKE_CURRENT_LIST_DIR}/posix_spawnattr_destroy.c
+        ${CMAKE_CURRENT_LIST_DIR}/posix_spawnattr_getflags.c
+        ${CMAKE_CURRENT_LIST_DIR}/posix_spawnattr_getpgroup.c
+        ${CMAKE_CURRENT_LIST_DIR}/posix_spawnattr_getsigdefault.c
+        ${CMAKE_CURRENT_LIST_DIR}/posix_spawnattr_getsigmask.c
+        ${CMAKE_CURRENT_LIST_DIR}/posix_spawnattr_init.c
+        ${CMAKE_CURRENT_LIST_DIR}/posix_spawnattr_sched.c
+        ${CMAKE_CURRENT_LIST_DIR}/posix_spawnattr_setflags.c
+        ${CMAKE_CURRENT_LIST_DIR}/posix_spawnattr_setpgroup.c
+        ${CMAKE_CURRENT_LIST_DIR}/posix_spawnattr_setsigdefault.c
+        ${CMAKE_CURRENT_LIST_DIR}/posix_spawnattr_setsigmask.c
+        ${CMAKE_CURRENT_LIST_DIR}/posix_spawn.c
+        ${CMAKE_CURRENT_LIST_DIR}/posix_spawn_file_actions_addclose.c
+        ${CMAKE_CURRENT_LIST_DIR}/posix_spawn_file_actions_adddup2.c
+        ${CMAKE_CURRENT_LIST_DIR}/posix_spawn_file_actions_addopen.c
+        ${CMAKE_CURRENT_LIST_DIR}/posix_spawn_file_actions_destroy.c
+        ${CMAKE_CURRENT_LIST_DIR}/posix_spawn_file_actions_init.c
+        ${CMAKE_CURRENT_LIST_DIR}/posix_spawnp.c
+        ${CMAKE_CURRENT_LIST_DIR}/system.c
+        ${CMAKE_CURRENT_LIST_DIR}/vfork.c
+        ${CMAKE_CURRENT_LIST_DIR}/wait.c
+        ${CMAKE_CURRENT_LIST_DIR}/waitid.c
+        ${CMAKE_CURRENT_LIST_DIR}/waitpid.c
+)

@@ -1,0 +1,27 @@
+#
+# ${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt
+#
+target_sources(${target}
+    PRIVATE
+        ${CMAKE_CURRENT_LIST_DIR}/btowc.c
+        ${CMAKE_CURRENT_LIST_DIR}/c16rtomb.c
+        ${CMAKE_CURRENT_LIST_DIR}/c32rtomb.c
+        ${CMAKE_CURRENT_LIST_DIR}/internal.c
+        ${CMAKE_CURRENT_LIST_DIR}/internal.h
+        ${CMAKE_CURRENT_LIST_DIR}/mblen.c
+        ${CMAKE_CURRENT_LIST_DIR}/mbrlen.c
+        ${CMAKE_CURRENT_LIST_DIR}/mbrtoc16.c
+        ${CMAKE_CURRENT_LIST_DIR}/mbrtoc32.c
+        ${CMAKE_CURRENT_LIST_DIR}/mbrtowc.c
+        ${CMAKE_CURRENT_LIST_DIR}/mbsinit.c
+        ${CMAKE_CURRENT_LIST_DIR}/mbsnrtowcs.c
+        ${CMAKE_CURRENT_LIST_DIR}/mbsrtowcs.c
+        ${CMAKE_CURRENT_LIST_DIR}/mbstowcs.c
+        ${CMAKE_CURRENT_LIST_DIR}/mbtowc.c
+        ${CMAKE_CURRENT_LIST_DIR}/wcrtomb.c
+        ${CMAKE_CURRENT_LIST_DIR}/wcsnrtombs.c
+        ${CMAKE_CURRENT_LIST_DIR}/wcsrtombs.c
+        ${CMAKE_CURRENT_LIST_DIR}/wcstombs.c
+        ${CMAKE_CURRENT_LIST_DIR}/wctob.c
+        ${CMAKE_CURRENT_LIST_DIR}/wctomb.c
+)

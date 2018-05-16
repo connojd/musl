@@ -1,0 +1,28 @@
+#
+# ${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt
+#
+target_sources(${target}
+    PRIVATE
+        ${CMAKE_CURRENT_LIST_DIR}/fgetgrent.c
+        ${CMAKE_CURRENT_LIST_DIR}/fgetpwent.c
+        ${CMAKE_CURRENT_LIST_DIR}/fgetspent.c
+        ${CMAKE_CURRENT_LIST_DIR}/getgr_a.c
+        ${CMAKE_CURRENT_LIST_DIR}/getgrent_a.c
+        ${CMAKE_CURRENT_LIST_DIR}/getgrent.c
+        ${CMAKE_CURRENT_LIST_DIR}/getgrouplist.c
+        ${CMAKE_CURRENT_LIST_DIR}/getgr_r.c
+        ${CMAKE_CURRENT_LIST_DIR}/getpw_a.c
+        ${CMAKE_CURRENT_LIST_DIR}/getpwent_a.c
+        ${CMAKE_CURRENT_LIST_DIR}/getpwent.c
+        ${CMAKE_CURRENT_LIST_DIR}/getpw_r.c
+        ${CMAKE_CURRENT_LIST_DIR}/getspent.c
+        ${CMAKE_CURRENT_LIST_DIR}/getspnam.c
+        ${CMAKE_CURRENT_LIST_DIR}/getspnam_r.c
+        ${CMAKE_CURRENT_LIST_DIR}/lckpwdf.c
+        ${CMAKE_CURRENT_LIST_DIR}/nscd.h
+        ${CMAKE_CURRENT_LIST_DIR}/nscd_query.c
+        ${CMAKE_CURRENT_LIST_DIR}/putgrent.c
+        ${CMAKE_CURRENT_LIST_DIR}/putpwent.c
+        ${CMAKE_CURRENT_LIST_DIR}/putspent.c
+        ${CMAKE_CURRENT_LIST_DIR}/pwf.h
+)

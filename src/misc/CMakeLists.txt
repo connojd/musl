@@ -1,0 +1,45 @@
+#
+# ${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt
+#
+target_sources(${target}
+    PRIVATE
+        ${CMAKE_CURRENT_LIST_DIR}/a64l.c
+        ${CMAKE_CURRENT_LIST_DIR}/basename.c
+        ${CMAKE_CURRENT_LIST_DIR}/dirname.c
+        ${CMAKE_CURRENT_LIST_DIR}/ffs.c
+        ${CMAKE_CURRENT_LIST_DIR}/ffsl.c
+        ${CMAKE_CURRENT_LIST_DIR}/ffsll.c
+        ${CMAKE_CURRENT_LIST_DIR}/fmtmsg.c
+        ${CMAKE_CURRENT_LIST_DIR}/forkpty.c
+        ${CMAKE_CURRENT_LIST_DIR}/getauxval.c
+        ${CMAKE_CURRENT_LIST_DIR}/get_current_dir_name.c
+        ${CMAKE_CURRENT_LIST_DIR}/getdomainname.c
+        ${CMAKE_CURRENT_LIST_DIR}/getentropy.c
+        ${CMAKE_CURRENT_LIST_DIR}/gethostid.c
+        ${CMAKE_CURRENT_LIST_DIR}/getopt.c
+        ${CMAKE_CURRENT_LIST_DIR}/getopt_long.c
+        ${CMAKE_CURRENT_LIST_DIR}/getpriority.c
+        ${CMAKE_CURRENT_LIST_DIR}/getresgid.c
+        ${CMAKE_CURRENT_LIST_DIR}/getresuid.c
+        ${CMAKE_CURRENT_LIST_DIR}/getrlimit.c
+        ${CMAKE_CURRENT_LIST_DIR}/getrusage.c
+        ${CMAKE_CURRENT_LIST_DIR}/getsubopt.c
+        ${CMAKE_CURRENT_LIST_DIR}/initgroups.c
+        ${CMAKE_CURRENT_LIST_DIR}/ioctl.c
+        ${CMAKE_CURRENT_LIST_DIR}/issetugid.c
+        ${CMAKE_CURRENT_LIST_DIR}/lockf.c
+        ${CMAKE_CURRENT_LIST_DIR}/login_tty.c
+        ${CMAKE_CURRENT_LIST_DIR}/mntent.c
+        ${CMAKE_CURRENT_LIST_DIR}/nftw.c
+        ${CMAKE_CURRENT_LIST_DIR}/openpty.c
+        ${CMAKE_CURRENT_LIST_DIR}/ptsname.c
+        ${CMAKE_CURRENT_LIST_DIR}/pty.c
+        ${CMAKE_CURRENT_LIST_DIR}/realpath.c
+        ${CMAKE_CURRENT_LIST_DIR}/setdomainname.c
+        ${CMAKE_CURRENT_LIST_DIR}/setpriority.c
+        ${CMAKE_CURRENT_LIST_DIR}/setrlimit.c
+        ${CMAKE_CURRENT_LIST_DIR}/syscall.c
+        ${CMAKE_CURRENT_LIST_DIR}/syslog.c
+        ${CMAKE_CURRENT_LIST_DIR}/uname.c
+        ${CMAKE_CURRENT_LIST_DIR}/wordexp.c
+)

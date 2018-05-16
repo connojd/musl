@@ -1,0 +1,20 @@
+#
+# ${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt
+#
+target_sources(${target}
+    PRIVATE
+        ${CMAKE_CURRENT_LIST_DIR}/alphasort.c
+        ${CMAKE_CURRENT_LIST_DIR}/closedir.c
+        ${CMAKE_CURRENT_LIST_DIR}/__dirent.h
+        ${CMAKE_CURRENT_LIST_DIR}/dirfd.c
+        ${CMAKE_CURRENT_LIST_DIR}/fdopendir.c
+        ${CMAKE_CURRENT_LIST_DIR}/__getdents.c
+        ${CMAKE_CURRENT_LIST_DIR}/opendir.c
+        ${CMAKE_CURRENT_LIST_DIR}/readdir.c
+        ${CMAKE_CURRENT_LIST_DIR}/readdir_r.c
+        ${CMAKE_CURRENT_LIST_DIR}/rewinddir.c
+        ${CMAKE_CURRENT_LIST_DIR}/scandir.c
+        ${CMAKE_CURRENT_LIST_DIR}/seekdir.c
+        ${CMAKE_CURRENT_LIST_DIR}/telldir.c
+        ${CMAKE_CURRENT_LIST_DIR}/versionsort.c
+)

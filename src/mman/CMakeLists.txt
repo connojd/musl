@@ -1,0 +1,19 @@
+#
+# ${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt
+#
+target_sources(${target}
+    PRIVATE
+        ${CMAKE_CURRENT_LIST_DIR}/madvise.c
+        ${CMAKE_CURRENT_LIST_DIR}/mincore.c
+        ${CMAKE_CURRENT_LIST_DIR}/mlockall.c
+        ${CMAKE_CURRENT_LIST_DIR}/mlock.c
+        ${CMAKE_CURRENT_LIST_DIR}/mmap.c
+        ${CMAKE_CURRENT_LIST_DIR}/mprotect.c
+        ${CMAKE_CURRENT_LIST_DIR}/mremap.c
+        ${CMAKE_CURRENT_LIST_DIR}/msync.c
+        ${CMAKE_CURRENT_LIST_DIR}/munlockall.c
+        ${CMAKE_CURRENT_LIST_DIR}/munlock.c
+        ${CMAKE_CURRENT_LIST_DIR}/munmap.c
+        ${CMAKE_CURRENT_LIST_DIR}/posix_madvise.c
+        ${CMAKE_CURRENT_LIST_DIR}/shm_open.c
+)

@@ -1,0 +1,44 @@
+#
+# ${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt
+#
+target_sources(${target}
+    PRIVATE
+        ${CMAKE_CURRENT_LIST_DIR}/block.c
+        ${CMAKE_CURRENT_LIST_DIR}/getitimer.c
+        ${CMAKE_CURRENT_LIST_DIR}/kill.c
+        ${CMAKE_CURRENT_LIST_DIR}/killpg.c
+        ${CMAKE_CURRENT_LIST_DIR}/psiginfo.c
+        ${CMAKE_CURRENT_LIST_DIR}/psignal.c
+        ${CMAKE_CURRENT_LIST_DIR}/raise.c
+        ${CMAKE_CURRENT_LIST_DIR}/restore.c
+        ${CMAKE_CURRENT_LIST_DIR}/setitimer.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigaction.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigaddset.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigaltstack.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigandset.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigdelset.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigemptyset.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigfillset.c
+        ${CMAKE_CURRENT_LIST_DIR}/sighold.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigignore.c
+        ${CMAKE_CURRENT_LIST_DIR}/siginterrupt.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigisemptyset.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigismember.c
+        ${CMAKE_CURRENT_LIST_DIR}/siglongjmp.c
+        ${CMAKE_CURRENT_LIST_DIR}/signal.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigorset.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigpause.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigpending.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigprocmask.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigqueue.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigrelse.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigrtmax.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigrtmin.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigset.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigsetjmp.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigsetjmp_tail.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigsuspend.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigtimedwait.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigwait.c
+        ${CMAKE_CURRENT_LIST_DIR}/sigwaitinfo.c
+)

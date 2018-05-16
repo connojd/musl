@@ -1,0 +1,31 @@
+#
+# ${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt
+#
+target_sources(${target}
+    PRIVATE
+        ${CMAKE_CURRENT_LIST_DIR}/atomic.h
+        ${CMAKE_CURRENT_LIST_DIR}/dynlink.h
+        ${CMAKE_CURRENT_LIST_DIR}/fdpic_crt.h
+        ${CMAKE_CURRENT_LIST_DIR}/floatscan.c
+        ${CMAKE_CURRENT_LIST_DIR}/floatscan.h
+        ${CMAKE_CURRENT_LIST_DIR}/futex.h
+        ${CMAKE_CURRENT_LIST_DIR}/intscan.c
+        ${CMAKE_CURRENT_LIST_DIR}/intscan.h
+        ${CMAKE_CURRENT_LIST_DIR}/ksigaction.h
+        ${CMAKE_CURRENT_LIST_DIR}/libc.c
+        ${CMAKE_CURRENT_LIST_DIR}/libc.h
+        ${CMAKE_CURRENT_LIST_DIR}/libm.h
+        ${CMAKE_CURRENT_LIST_DIR}/locale_impl.h
+        ${CMAKE_CURRENT_LIST_DIR}/malloc_impl.h
+        ${CMAKE_CURRENT_LIST_DIR}/procfdname.c
+        ${CMAKE_CURRENT_LIST_DIR}/pthread_impl.h
+        ${CMAKE_CURRENT_LIST_DIR}/shgetc.c
+        ${CMAKE_CURRENT_LIST_DIR}/shgetc.h
+        ${CMAKE_CURRENT_LIST_DIR}/stdio_impl.h
+        ${CMAKE_CURRENT_LIST_DIR}/syscall.c
+        ${CMAKE_CURRENT_LIST_DIR}/syscall.h
+        ${CMAKE_CURRENT_LIST_DIR}/syscall_ret.c
+        ${CMAKE_CURRENT_LIST_DIR}/vdso.c
+        ${CMAKE_CURRENT_LIST_DIR}/version.c
+        ${CMAKE_CURRENT_LIST_DIR}/vis.h
+)

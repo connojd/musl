@@ -1,0 +1,47 @@
+#
+# ${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt
+#
+target_sources(${target}
+    PRIVATE
+        ${CMAKE_CURRENT_LIST_DIR}/__asctime.c
+        ${CMAKE_CURRENT_LIST_DIR}/asctime.c
+        ${CMAKE_CURRENT_LIST_DIR}/asctime_r.c
+        ${CMAKE_CURRENT_LIST_DIR}/clock.c
+        ${CMAKE_CURRENT_LIST_DIR}/clock_getcpuclockid.c
+        ${CMAKE_CURRENT_LIST_DIR}/clock_getres.c
+        ${CMAKE_CURRENT_LIST_DIR}/clock_gettime.c
+        ${CMAKE_CURRENT_LIST_DIR}/clock_nanosleep.c
+        ${CMAKE_CURRENT_LIST_DIR}/clock_settime.c
+        ${CMAKE_CURRENT_LIST_DIR}/ctime.c
+        ${CMAKE_CURRENT_LIST_DIR}/ctime_r.c
+        ${CMAKE_CURRENT_LIST_DIR}/difftime.c
+        ${CMAKE_CURRENT_LIST_DIR}/ftime.c
+        ${CMAKE_CURRENT_LIST_DIR}/getdate.c
+        ${CMAKE_CURRENT_LIST_DIR}/gettimeofday.c
+        ${CMAKE_CURRENT_LIST_DIR}/gmtime.c
+        ${CMAKE_CURRENT_LIST_DIR}/gmtime_r.c
+        ${CMAKE_CURRENT_LIST_DIR}/localtime.c
+        ${CMAKE_CURRENT_LIST_DIR}/localtime_r.c
+        ${CMAKE_CURRENT_LIST_DIR}/__map_file.c
+        ${CMAKE_CURRENT_LIST_DIR}/mktime.c
+        ${CMAKE_CURRENT_LIST_DIR}/__month_to_secs.c
+        ${CMAKE_CURRENT_LIST_DIR}/nanosleep.c
+        ${CMAKE_CURRENT_LIST_DIR}/__secs_to_tm.c
+        ${CMAKE_CURRENT_LIST_DIR}/strftime.c
+        ${CMAKE_CURRENT_LIST_DIR}/strptime.c
+        ${CMAKE_CURRENT_LIST_DIR}/time.c
+        ${CMAKE_CURRENT_LIST_DIR}/timegm.c
+        ${CMAKE_CURRENT_LIST_DIR}/time_impl.h
+        ${CMAKE_CURRENT_LIST_DIR}/timer_create.c
+        ${CMAKE_CURRENT_LIST_DIR}/timer_delete.c
+        ${CMAKE_CURRENT_LIST_DIR}/timer_getoverrun.c
+        ${CMAKE_CURRENT_LIST_DIR}/timer_gettime.c
+        ${CMAKE_CURRENT_LIST_DIR}/timer_settime.c
+        ${CMAKE_CURRENT_LIST_DIR}/times.c
+        ${CMAKE_CURRENT_LIST_DIR}/timespec_get.c
+        ${CMAKE_CURRENT_LIST_DIR}/__tm_to_secs.c
+        ${CMAKE_CURRENT_LIST_DIR}/__tz.c
+        ${CMAKE_CURRENT_LIST_DIR}/utime.c
+        ${CMAKE_CURRENT_LIST_DIR}/wcsftime.c
+        ${CMAKE_CURRENT_LIST_DIR}/__year_to_secs.c
+)
