@@ -9,8 +9,10 @@ fi
 dir='${CMAKE_CURRENT_LIST_DIR}'
 cml=$1/CMakeLists.txt
 
+rm -f $cml
+
 echo "#" >> $cml
-echo "# $dir/CMakeLists.txt" >> $cml
+echo "# $cml" >> $cml
 echo "#" >> $cml
 echo 'target_sources(${target}' >> $cml
 echo '    PRIVATE' >> $cml
