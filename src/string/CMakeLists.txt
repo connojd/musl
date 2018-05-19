@@ -1,5 +1,5 @@
 #
-# ${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt
+# src/string/CMakeLists.txt
 #
 target_sources(${target}
     PRIVATE
@@ -48,6 +48,7 @@ target_sources(${target}
         ${CMAKE_CURRENT_LIST_DIR}/strtok_r.c
         ${CMAKE_CURRENT_LIST_DIR}/strverscmp.c
         ${CMAKE_CURRENT_LIST_DIR}/swab.c
+
         ${CMAKE_CURRENT_LIST_DIR}/wcpcpy.c
         ${CMAKE_CURRENT_LIST_DIR}/wcpncpy.c
         ${CMAKE_CURRENT_LIST_DIR}/wcscasecmp.c

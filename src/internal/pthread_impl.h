@@ -1,6 +1,11 @@
 #ifndef _PTHREAD_IMPL_H
 #define _PTHREAD_IMPL_H
 
+#ifndef __NEED_locale_t
+#define __NEED_locale_t
+#endif
+
+#include <bits/alltypes.h>
 #include <pthread.h>
 #include <signal.h>
 #include <errno.h>

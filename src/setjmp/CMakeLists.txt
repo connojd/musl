@@ -1,5 +1,5 @@
 #
-# ${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt
+# src/setjmp/CMakeLists.txt
 #
 target_sources(${target}
     PRIVATE

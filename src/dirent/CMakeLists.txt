@@ -1,5 +1,5 @@
 #
-# ${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt
+# src/dirent/CMakeLists.txt
 #
 target_sources(${target}
     PRIVATE
