@@ -1,35 +1,24 @@
+
 cmake_minimum_required(VERSION 3.11.0)
-
-##
-## PROJECT
-## name and version
-##
 project(musl VERSION 1.1.19 LANGUAGES C)
-
-#option(JSON_BuildTests "Build the unit tests when BUILD_TESTING is enabled." ON)
-#option(JSON_MultipleHeaders "Use non-amalgamated version of the library." OFF)
-
-##
-## CONFIGURATION
-##
-#set(MUSL_CONFIG_INSTALL_DIR        "lib/cmake/${PROJECT_NAME}")
-#set(MUSL_TARGETS_EXPORT_NAME       "${PROJECT_NAME}-targets")
-#set(MUSL_CMAKE_CONFIG_TEMPLATE     "cmake/config.cmake.in")
-#set(MUSL_CMAKE_CONFIG_DIR          "${CMAKE_CURRENT_BINARY_DIR}/cmake_config")
-#set(MUSL_CMAKE_PROJECT_CONFIG_FILE "${MUSL_CMAKE_CONFIG_DIR}/${PROJECT_NAME}-config.cmake")
-#set(MUSL_CMAKE_VERSION_CONFIG_FILE "${MUSL_CMAKE_CONFIG_DIR}/${PROJECT_NAME}-config-version.cmake")
-
 set(arch x86_64)
 set(src ${PROJECT_SOURCE_DIR})
 set(bin ${PROJECT_BINARY_DIR})
 
+#
 # PIC portion of CRT
+#
 add_library(crt_pic OBJECT ${src}/crt/rcrt1.c ${src}/crt/Scrt1.c)
 set_target_properties(crt_pic PROPERTIES POSITION_INDEPENDENT_CODE ON)
 target_compile_definitions(crt_pic PRIVATE CRT)
-target_include_directories(crt_pic PRIVATE ${src}/arch/${arch} ${src}/src/internal)
+target_include_directories(crt_pic PRIVATE
+    ${src}/arch/${arch}
+    ${src}/src/internal
+)
 
+#
 # Rest of CRT
+#
 add_library(crt OBJECT
     ${src}/crt/crt1.c
     ${src}/crt/${arch}/crti.s
@@ -38,10 +27,9 @@ add_library(crt OBJECT
 target_compile_definitions(crt PRIVATE CRT)
 target_include_directories(crt PRIVATE ${src}/arch/${arch} ${src}/src/internal)
 
-set(target c)
-add_library(${target} STATIC "")
-set_target_properties(${target} PROPERTIES LINKER_LANGUAGE C)
-
+#
+# Generated headers
+#
 add_custom_command(
     OUTPUT ${bin}/include/bits/alltypes.h
     COMMAND ${src}/write_alltypes.sh ${bin} ${src} ${arch}
@@ -59,6 +47,13 @@ add_custom_command(
     COMMAND ${src}/write_version.sh ${bin} ${src}
     DEPENDS ${src}/VERSION
 )
+
+#
+# libc
+#
+set(target c)
+add_library(${target} STATIC "")
+set_target_properties(${target} PROPERTIES LINKER_LANGUAGE C)
 
 target_sources(${target} PRIVATE
     ${bin}/include/bits/alltypes.h
@@ -89,7 +84,7 @@ target_include_directories(${target} PRIVATE
 )
 
 include(src/aio/CMakeLists.txt)
-#include(src/complex/CMakeLists.txt)
+include(src/complex/CMakeLists.txt)
 include(src/conf/CMakeLists.txt)
 include(src/crypt/CMakeLists.txt)
 include(src/ctype/CMakeLists.txt)
