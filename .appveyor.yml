@@ -1,0 +1,18 @@
+
+matrix:
+  fast_finish: true
+
+os: Visual Studio 2017
+platform: x64
+configuration: Release
+
+build:
+  parallel: true
+
+build_script:
+  - mkdir build_msbuild
+  - cd build_msbuild
+  - cmake -G "Visual Studio 15 2017 Win64" ..
+  - msbuild /m:3 musl.sln
+
+test: off

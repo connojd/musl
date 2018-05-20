@@ -1,6 +1,7 @@
 
-cmake_minimum_required(VERSION 3.11.0)
+cmake_minimum_required(VERSION 3.6.0)
 project(musl VERSION 1.1.19 LANGUAGES C)
+
 set(arch x86_64)
 set(src ${PROJECT_SOURCE_DIR})
 set(bin ${PROJECT_BINARY_DIR})
@@ -8,24 +9,29 @@ set(bin ${PROJECT_BINARY_DIR})
 #
 # PIC portion of CRT
 #
-add_library(crt_pic OBJECT ${src}/crt/rcrt1.c ${src}/crt/Scrt1.c)
-set_target_properties(crt_pic PROPERTIES POSITION_INDEPENDENT_CODE ON)
-target_compile_definitions(crt_pic PRIVATE CRT)
-target_include_directories(crt_pic PRIVATE
-    ${src}/arch/${arch}
-    ${src}/src/internal
-)
-
+#add_library(crt_pic OBJECT ${src}/crt/rcrt1.c ${src}/crt/Scrt1.c)
+#set_target_properties(crt_pic PROPERTIES POSITION_INDEPENDENT_CODE ON)
+#target_compile_definitions(crt_pic PRIVATE CRT)
+#target_include_directories(crt_pic PRIVATE
+#    ${src}/arch/${arch}
+#    ${src}/src/internal
+#    ${src}/include
+#)
 #
-# Rest of CRT
-#
-add_library(crt OBJECT
-    ${src}/crt/crt1.c
-    ${src}/crt/${arch}/crti.s
-    ${src}/crt/${arch}/crtn.s
-)
-target_compile_definitions(crt PRIVATE CRT)
-target_include_directories(crt PRIVATE ${src}/arch/${arch} ${src}/src/internal)
+##
+## Rest of CRT
+##
+#add_library(crt OBJECT
+#    ${src}/crt/crt1.c
+#    ${src}/crt/${arch}/crti.s
+#    ${src}/crt/${arch}/crtn.s
+#)
+#target_compile_definitions(crt PRIVATE CRT)
+#target_include_directories(crt PRIVATE
+#    ${src}/arch/${arch}
+#    ${src}/src/internal
+#    ${src}/include
+#)
 
 #
 # Generated headers
