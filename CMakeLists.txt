@@ -6,66 +6,66 @@ set(arch x86_64)
 set(src ${PROJECT_SOURCE_DIR})
 set(bin ${PROJECT_BINARY_DIR})
 
-#
-# PIC portion of CRT
-#
-#add_library(crt_pic OBJECT ${src}/crt/rcrt1.c ${src}/crt/Scrt1.c)
-#set_target_properties(crt_pic PROPERTIES POSITION_INDEPENDENT_CODE ON)
-#target_compile_definitions(crt_pic PRIVATE CRT)
-#target_include_directories(crt_pic PRIVATE
-#    ${src}/arch/${arch}
-#    ${src}/src/internal
-#    ${src}/include
-#)
-#
-##
-## Rest of CRT
-##
-#add_library(crt OBJECT
-#    ${src}/crt/crt1.c
-#    ${src}/crt/${arch}/crti.s
-#    ${src}/crt/${arch}/crtn.s
-#)
-#target_compile_definitions(crt PRIVATE CRT)
-#target_include_directories(crt PRIVATE
-#    ${src}/arch/${arch}
-#    ${src}/src/internal
-#    ${src}/include
-#)
-
-#
+#----------------------------------------------------------------------------
 # Generated headers
-#
-add_custom_command(
-    OUTPUT ${bin}/include/bits/alltypes.h
-    COMMAND ${src}/write_alltypes.sh ${bin} ${src} ${arch}
-    DEPENDS ${src}/arch/${arch}/bits/alltypes.h.in
-    DEPENDS ${src}/include/alltypes.h.in
-    DEPENDS ${src}/tools/mkalltypes.sed
-)
-add_custom_command(
-    OUTPUT ${bin}/include/bits/syscall.h
-    COMMAND ${src}/write_syscall.sh ${bin} ${src} ${arch}
-    DEPENDS ${src}/arch/${arch}/bits/syscall.h.in
-)
+#----------------------------------------------------------------------------
+#add_custom_command(
+#    OUTPUT ${bin}/include/bits/alltypes.h
+#    COMMAND ${src}/write_alltypes.sh ${bin} ${src} ${arch}
+#    DEPENDS ${src}/arch/${arch}/bits/alltypes.h.in
+#    DEPENDS ${src}/include/alltypes.h.in
+#    DEPENDS ${src}/tools/mkalltypes.sed
+#)
+#add_custom_command(
+#    OUTPUT ${bin}/include/bits/syscall.h
+#    COMMAND ${src}/write_syscall.sh ${bin} ${src} ${arch}
+#    DEPENDS ${src}/arch/${arch}/bits/syscall.h.in
+#)
 add_custom_command(
     OUTPUT ${bin}/src/internal/version.h
-    COMMAND ${src}/write_version.sh ${bin} ${src}
-    DEPENDS ${src}/VERSION
+    COMMAND ${CMAKE_COMMAND} -DPROJECT_BINARY_DIR=${bin} -DVERSION=${PROJECT_VERSION} -P ${src}/write_version.cmake
+)
+
+#----------------------------------------------------------------------------
+# PIC portion of CRT
+#----------------------------------------------------------------------------
+add_library(crt_pic OBJECT ${src}/crt/rcrt1.c ${src}/crt/Scrt1.c)
+set_target_properties(crt_pic PROPERTIES POSITION_INDEPENDENT_CODE ON)
+
+#target_sources(crt_pic PRIVATE ${bin}/include/bits/alltypes.h)
+target_compile_definitions(crt_pic PRIVATE CRT)
+target_include_directories(crt_pic PRIVATE
+    ${src}/arch/${arch}
+    ${src}/src/internal
+    ${src}/include
+    ${bin}/include
 )
 
 #
-# libc
+#----------------------------------------------------------------------------
+# Rest of CRT
+#----------------------------------------------------------------------------
 #
+add_library(crt OBJECT
+    ${src}/crt/crt1.c
+    ${src}/crt/${arch}/crti.s
+    ${src}/crt/${arch}/crtn.s
+)
+target_include_directories(crt PRIVATE
+    ${src}/arch/${arch}
+    ${src}/src/internal
+    ${src}/include
+)
+target_compile_definitions(crt PRIVATE CRT)
+
+#----------------------------------------------------------------------------
+# libc
+#----------------------------------------------------------------------------
 set(target c)
 add_library(${target} STATIC "")
 set_target_properties(${target} PROPERTIES LINKER_LANGUAGE C)
 
-target_sources(${target} PRIVATE
-    ${bin}/include/bits/alltypes.h
-    ${bin}/include/bits/syscall.h
-    ${bin}/src/internal/version.h
-)
+target_sources(${target} PRIVATE ${bin}/src/internal/version.h)
 target_compile_options(${target} PRIVATE
     -std=c99 -nostdinc -ffreestanding
     -Wa,--noexecstack -Os -pipe -fomit-frame-pointer
